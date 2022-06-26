@@ -1,0 +1,21 @@
+img {
+  float: left;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 56.25%;
+}
+
+#textboxarea {
+  float: right;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 56.25%;
+}
+
+.aspect-ratio {
+  aspect-ratio: 16 / 9;
+}
