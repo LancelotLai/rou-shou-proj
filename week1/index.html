@@ -11,19 +11,17 @@
   <body>
     <div id="imagearea">
       <img
-        src="https://2cat.komica.org/~tedc21thc/new/src/1656086804768.jpg"
+        src="http://qnimate.com/understanding-html-img-tag/"
         alt="K島"
       />
     </div>
-    <div id="textboxarea">
-      <h1>Please input text</h1>
-      <p>
-        <textarea id="Textarea" rows="20" cols="40" required> </textarea>
-      </p>
-      <button type="submit" value="Submit" onclick="alert('submitted')">
-        submit
-      </button>
-      <button type="reset" value="Reset" onclick="cleartext();">reset</button>
+    <div>
+      <form action="" method="post">
+       <label for="textarea1">Please write something</label><br>
+        <textarea name="textarea1" rows="20" cols="40" required> </textarea><br>
+      <input type="submit" value="Submit" onclick="alert('submitted')">
+      <input type="reset" value="Reset">
+    </form>
     </div>
   </body>
 </html>
