@@ -8,40 +8,36 @@
     <script src="index.js"></script>
     <title>Web homework week 1</title>
   </head>
-  <body>
-    <div id="motherbox">
-    <div id="imagearea">
-      <figure>
-      <img
-        src="https://ppt.cc/fzRhax@.png"
-        alt="K島"
-      />
-      <figcaption>屌咩置中不能</figcaption>
-      </figure>
+  <body id="motherbox">
+      <div id="imagearea">
+        <figure>
+          <img id="image1" src="https://ppt.cc/fzRhax@.png" alt="K島" />
+          <figcaption>屌咩置中不能</figcaption>
+        </figure>
+      </div>
+      <div id="textboxarea">
+        <form action="" method="post" onsubmit= changeSrc()>
+          <label for="textarea1">Please write something</label><br />
+          <textarea name="textarea1" required> </textarea><br />
+          <fieldset>
+            <legend>閣下咩姓別</legend>
+            <div>
+              <input type="radio" id="male" name="sex" value="male" />
+              <label for="male">男</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="sex" value="女" />
+              <label for="female">女</label>
+            </div>
+            <div>
+              <input type="radio" id="cfu" name="sex" value="cfu" />
+              <label for="cfu">cfu</label>
+            </div>
+          </fieldset>
+          <input type="submit" value="Submit" id="subt">
+          <input type="reset" value="Reset" />
+        </form>
+      </div>
     </div>
-    <div id="textboxarea">
-      <form action="" method="post">
-       <label for="textarea1">Please write something</label><br>
-        <textarea name="textarea1" rows="20" cols="40" required> </textarea><br>
-        <fieldset>
-          <legend>閣下咩姓別</legend>
-          <div>
-          <input type="radio" id="male" name="sex" value="male">
-          <label for ="male">男</label>
-        </div>
-        <div>
-          <input type="radio" id="female" name="sex" value="女">
-          <label for ="female">女</label>
-        </div>
-        <div>
-          <input type="radio" id="cfu" name="sex" value="cfu">
-          <label for ="cfu">cfu</label>
-        </div>
-        </fieldset>
-      <input type="submit" value="Submit" onclick="alert('submitted')">
-      <input type="reset" value="Reset">
-    </form>
-    </div>
-  </div>
   </body>
 </html>
