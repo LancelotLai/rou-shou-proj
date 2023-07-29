@@ -12,11 +12,11 @@
     <div id="imagearea">
       <figure>
         <img id="image1" src="https://ppt.cc/fzRhax@.png" alt="K島" />
-        <figcaption>屌咩置中不能</figcaption>
+        <figcaption id="fig1">屌咩置中不能</figcaption>
       </figure>
     </div>
     <div id="textboxarea">
-      <form action="" method="post" onsubmit="changeSrc()">
+      <form action="" method="post" onsubmit="cAudio2()">
         <label for="textarea1">Please write something</label><br />
         <textarea name="textarea1" required> </textarea><br />
         <fieldset>
@@ -65,12 +65,8 @@
         <input type="reset" value="Reset" />
       </form>
     </div>
-    <iframe
-      src="04 Floor Killer .mp3?autoplay=1"
-      type="audio/mpeg"
-      allow="autoplay; mute"
-    ></iframe>
-    <iframe
+    <p id = "audio1"></p>
+    <iframe id = "video"
       width="560"
       height="315"
       src="https://www.youtube.com/embed/RqpTHcK-LQg?autoplay=1&mute=1"
