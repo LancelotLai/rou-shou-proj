@@ -9,6 +9,42 @@ function submitAlert() {
 function avoidJump () {
   return false ;
 }
+function stop9(){
+  console.log("e");
+  var audio_player = document.getElementById("audio-player")
+  if(audio_player.currentTime >=2){
+    console.log("2 is work")
+    audio_player.pause();}
+
+    setTimeout(function(){
+      console.log(2)
+      audio_player.pause();
+      // audio_player.currentTime = 0;
+    }, 5000)
+    
+}
+
+
+function cAudio2() {
+  event.preventDefault();
+  document.getElementById("audio1").innerHTML = ('<audio id="audio-player" controls="controls" src="04 Floor Killer .mp3" type="audio/mpeg" autoplay ="true" muted="mute" > if(audio-player.currentTime >=2){audio-player.pause();}');
+  document.getElementById("video1").innerHTML = ('<iframe id="video-player" width= "560" height="315" src="https://www.youtube.com/embed/RqpTHcK-LQg?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+  document.getElementById("image1").style.display = "none";
+  stop9();
+}
+
+
+
+function changeSrc() {
+  // try {
+  // event.preventDefault();
+  document.getElementById("image1").src = "https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" ;
+  // getsubmitdata(event);
+  // // submitAlert();
+  // } catch(err) {
+  //   throw err;
+  // }
+}
 
 function vaildate1(event) {
   var s1 = document.getElementById("male");
@@ -18,67 +54,85 @@ function vaildate1(event) {
   var c2 = document.getElementById("habit2");
   var c3 = document.getElementById("habit3");
 
-if (s2.checked){
-  if(c1.checked){
-    switch(true){
-      case (c2.checked && c3.checked):
-        alert("Female can't fap, diuhi and callFBI.");
-        break;
-      case(c2.checked):
-      alert("Female can't fap and diuhi.");
+  if(s2.checked){
+  switch (true){
+    case ( c1.checked && c2.checked && c3.checked === true ):
+      alert("Female can't fap, diuhi and callFBI.")
+      disNone();
       break;
-      case (c3.checked):
-        alert("Female can't fap and callFBI.");
+    case (c1.checked && c2.checked === true ):
+      alert("Female can't fap and diuhi.")
+      disNone();
+      break;
+    case ( c1.checked && c3.checked === true ):
+      alert("Female can't fap and callFBI.")
+      disNone();
+      break;
+    case ( c2.checked && c3.checked === true ):
+        alert("Female can't diuhi and callFBI.")
+        disNone();
         break;
-        default:
-          alert("Female can't fap");
-    } 
-  } 
-  if (c2.checked){
-    switch(true){
-      case (c3.checked):
-        alert("Female can't diuhi and callFBI.");
+    case ( c1.checked === true ):
+      alert("Female can't fap.")
+      disNone();
+       break;
+    case ( c2.checked === true ):
+      alert("Female can't diuhi.")
+      disNone();
+      break;
+    case ( c3.checked === true ):
+      alert("Female can't callFBI.")
+      disNone();
+      break;
+      default:
+          alert("You can do what you want.");
+          return cAudio2();
         break;
-        default:
-          alert("Female can't diuhi");
-  } 
-} 
+  }
+
+}
 else {
-  alert("Female can't calFBI");
-}
-} else{
   alert("You can do what you want.");
-  return disNone();
+          return cAudio2();
 }
-
 }
+// if (s2.checked){
+//   if(c1.checked){
+//     switch(true){
+//       case (c2.checked && c3.checked):
+//         alert("Female can't fap, diuhi and callFBI.");
+//         break;
+//       case(c2.checked):
+//       alert("Female can't fap and diuhi.");
+//       break;
+//       case (c3.checked):
+//         alert("Female can't fap and callFBI.");
+//         break;
+//         default:
+//           alert("Female can't fap");
+//           break;
+//     } 
+//   } 
+//   if (c2.checked){
+//     switch(true){
+//       case (c3.checked):
+//         alert("Female can't diuhi and callFBI.");
+//         break;
+//         default:
+//           alert("Female can't diuhi");
+//           break;
+//   } 
+// } 
+// else {
+//   alert("Female can't calFBI");
+// }
+// } else{
+//   alert("You can do what you want.");
+//   return cAudio2();
+// }
 
+// }
 
-    switch (true){
-      // case ( c1.checked && c2.checked && c3.checked === true ):
-      //   alert("Female can't fap, diuhi and callFBI.")
-      //   break;
-      // case (c1.checked && c2.checked === true ):
-      //   alert("Female can't fap and diuhi.")
-      //   break;
-      // case ( c1.checked && c3.checked === true ):
-      //   alert("Female can't fap and callFBI.")
-      //   break;
-      // case ( c2.checked && c3.checked === true ):
-      //     alert("Female can't diuhi and callFBI.")
-      //     break;
-      // case ( c1.checked === true ):
-      //   alert("Female can't fap.")
-      //    break;
-      // case ( c2.checked === true ):
-      //   alert("Female can't diuhi.")
-      //   break;
-      // case ( c3.checked === true ):
-      //   alert("Female can't callFBI.")
-      //   break;
-        default:
-          break;
-    }
 
 function disNone() {
   event.preventDefault();
@@ -99,16 +153,6 @@ function getsubmitdata (event) {
   return false;
 }
 
-function changeSrc() {
-  try {
-  event.preventDefault();
-  document.getElementById("image1").src = "https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" ;
-  getsubmitdata(event);
-  // submitAlert();
-  } catch(err) {
-    throw err;
-  }
-}
 
 function demo1 (){
   document.getElementById("male").innerHTML = p
@@ -124,11 +168,17 @@ function demo1 (){
 // }
 
 
-function cAudio2() {
-  event.preventDefault();
-  document.getElementById("audio1").innerHTML = ('<audio id="audio-player" controls="controls" src="04 Floor Killer .mp3" type="audio/mpeg" allow="autoplay; mute">');
 
-}
 
 //https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png
 //"https://ppt.cc/fzRhax@.png"
+
+{/* <iframe id = "video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/RqpTHcK-LQg?autoplay=1&mute=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe> */}

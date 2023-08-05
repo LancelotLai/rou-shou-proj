@@ -19,11 +19,26 @@ figure {
   margin: auto;
 }
 
+#audioArea {
+  margin: auto;
+  justify-self: center;
+}
+
+#videoArea {
+  margin: auto;
+  justify-self: center;
+}
+
 iframe {
   margin: auto;
   justify-self: center;
 }
 
+#image1{
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+}
 
 @media screen and (max-width: 320px) {
 
